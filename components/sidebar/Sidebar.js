@@ -7,7 +7,7 @@ import Button from '@material-tailwind/react/Button'
 import Icon from '@material-tailwind/react/Icon'
 import { CodeIcon } from '@heroicons/react/outline'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import LinkedInIcon from '@material-ui/Icons/LinkedIn'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
 //back-end
 import { useState } from 'react'
 
