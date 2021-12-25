@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+  .appName{
+    @apply
+    hidden
+    lg:inline-flex
+  }
+
+  .headerLinks{
+    @apply
+    hidden
+    lg:inline-flex
+    cursor-pointer
+    font-semibold
+    transform
+    transition
+    hover:text-teal-400
+    hover:scale-105
+    ease-in-out
+  }
+
+  .headerMenu{
+    @apply
+    inline-flex
+    lg:hidden
+  }
+
+  .headerIcons{
+    @apply
+    flex
+    items-center
+    space-x-3
+    lg:hidden
+  }
+
+  .userName{
+    @apply
+    hidden
+    lg:inline-flex
+    font-google-sans
+    text-lg
+    capitalize
+    font-medium
+  }
+
+  .sidebarDiv{
+    @apply
+    hidden 
+    ml-3
+    rounded-t-xl
+    lg:flex
+    flex-col
+    h-screen 
+    flex-[0.2]
+    overflow-hidden
+    scrollbar-hide 
+    bg-blue-50
+  }
+
+  .widgetsDiv{
+    @apply
+    hidden
+    lg:grid
+    place-items-center
+    items-center
+    h-screen
+    flex-[0.3]
+    overflow-y-scroll
+    scrollbar-hide
+    bg-gray-100
+  }
+
+  .categories{
+    @apply
+    flex
+    items-center
+    flex-grow
+    w-full
+    space-x-4
+    text-gray-800
+    my-3
+    cursor-pointer
+    hover:text-blue-400
+    transform
+    transition
+    hover:scale-105
+    duration-150
+    ease-in-out
+  }
+
+  .lowerSidebarOptions{
+    @apply
+    hover:text-blue-500
+    hover:scale-105
+    transform
+    transition
+    duration-150
+    ease-in-out
+  }
+
+  .blogPostText{
+    @apply
+    line-clamp-3
+    lg:line-clamp-none
+  }
+
+}
