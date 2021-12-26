@@ -68,7 +68,7 @@ export default function Home () {
         font-semibold
         font-google-sans'
         >
-          Sorry, that's an invalid input. Try again
+          Sorry, that is an invalid input. Try again
         </p>
       </ModalBody>
       <ModalFooter>
