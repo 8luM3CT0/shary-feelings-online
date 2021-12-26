@@ -30,8 +30,10 @@ function BlogPost ({ id, author, title }) {
       />
       <div
         className='
-            grid 
-            text-center 
+            flex
+            flex-col
+            text-center
+            items-center
             text-gray-500'
       >
         <h1

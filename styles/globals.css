@@ -110,27 +110,24 @@
         grid
         lg:flex
         flex-grow 
-        items-center 
-        justify-evenly
+        justify-center
+        lg:items-center 
+        lg:justify-evenly
         px-10
         py-7
-        space-x-4 
+        space-y-4 
         hover:scale-105 
         transform 
         transition 
         ease-in-out
   }
 
-
   .postText{
     @apply
         hidden 
         lg:inline-flex
         text-base 
-        font-robot-condensed 
-        w-[200px] 
-        line-clamp-3
-        lg:line-clamp-none 
+        font-robot-condensed  
         lg:w-[300px] 
         font-semibold 
         text-amber-600
