@@ -2,7 +2,7 @@
 //back-end
 import { useRouter } from 'next/router'
 
-function BlogPost () {
+function BlogPost ({ id, author, title }) {
   const router = useRouter()
 
   const goToPost = () => {
@@ -31,6 +31,7 @@ function BlogPost () {
       <img
         src='https://wallpaperaccess.com/full/921223.jpg'
         className='
+        rounded-xl
             h-[190px] 
             w-[290px] 
             lg:h-[210px] 
@@ -49,14 +50,14 @@ function BlogPost () {
         <h1
           className='
                 text-lg 
-                lg:text-2xl 
-                font-google-sans 
+                lg:text-[60px] 
+                font-robot-slab
                 font-semibold'
         >
-          Title
+          {title}
         </h1>
         <h2 className='text-base lg:text-xl font-hind-font font-semibold text-gray-200'>
-          by Author
+          by {author}
         </h2>
         <p
           className='
