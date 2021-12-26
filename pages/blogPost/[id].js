@@ -2,8 +2,23 @@
 import Head from 'next/head'
 import Header from '../../components/header/Header'
 //back-end
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { useCollection, useDocumentOnce } from 'react-firebase-hooks/firestore'
+import { creds, provider, store } from '../../firebaseFile'
+import { useRouter } from 'next/router'
 
 function Post () {
+  const [user] = useAuthState(creds)
+  const router = useRouter()
+  const { id } = router.query
+  const [snapshot, loadingSnapshot] = useDocumentOnce(
+    store.collection('blogPosts').doc(id)
+  )
+
+  if (!loadingSnapshot && !snapshot?.data()?.title) {
+    router.replace('/')
+  }
+
   return (
     <div
       className='
@@ -14,7 +29,7 @@ function Post () {
         bg-gray-200'
     >
       <Head>
-        <title>Post number null</title>
+        <title>Post by: {snapshot?.data()?.author}</title>
       </Head>
       <Header />
       <div
@@ -38,7 +53,9 @@ function Post () {
             border-blue-400
             pb-32
             '
-        ></main>
+        >
+          <h1>{snapshot?.data()?.title}</h1>
+        </main>
       </div>
     </div>
   )

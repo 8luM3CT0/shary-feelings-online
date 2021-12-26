@@ -6,27 +6,14 @@ function BlogPost ({ id, author, title }) {
   const router = useRouter()
 
   const goToPost = () => {
-    router.push('/blogPost/post')
+    router.push(`/blogPost/${id}`)
   }
 
   return (
     <div
       onClick={goToPost}
       className='
-        bg-gray-800
-        cursor-pointer
-        hover:bg-gray-600
-        flex
-        flex-grow 
-        items-center 
-        justify-evenly
-        px-10
-        py-7
-        space-x-4 
-        hover:scale-105 
-        transform 
-        transition 
-        ease-in-out'
+        blogPostDiv'
     >
       <img
         src='https://wallpaperaccess.com/full/921223.jpg'
@@ -59,18 +46,7 @@ function BlogPost ({ id, author, title }) {
         <h2 className='text-base lg:text-xl font-hind-font font-semibold text-gray-200'>
           by {author}
         </h2>
-        <p
-          className='
-        text-sm 
-        lg:text-base 
-        font-robot-condensed 
-        w-[200px] 
-        line-clamp-3
-        lg:line-clamp-none 
-        lg:w-[300px] 
-        font-semibold 
-        text-amber-600'
-        >
+        <p className='postText'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut

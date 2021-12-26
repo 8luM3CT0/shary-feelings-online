@@ -102,10 +102,38 @@
     ease-in-out
   }
 
-  .blogPostText{
+  .blogPostDiv{
     @apply
-    line-clamp-3
-    lg:line-clamp-none
+    bg-gray-800
+        cursor-pointer
+        hover:bg-gray-600
+        grid
+        lg:flex
+        flex-grow 
+        items-center 
+        justify-evenly
+        px-10
+        py-7
+        space-x-4 
+        hover:scale-105 
+        transform 
+        transition 
+        ease-in-out
+  }
+
+
+  .postText{
+    @apply
+        hidden 
+        lg:inline-flex
+        text-base 
+        font-robot-condensed 
+        w-[200px] 
+        line-clamp-3
+        lg:line-clamp-none 
+        lg:w-[300px] 
+        font-semibold 
+        text-amber-600
   }
 
 }

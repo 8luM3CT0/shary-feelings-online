@@ -82,7 +82,9 @@ function Header () {
               Home
             </h4>
             <h4 className='headerLinks'>Contact</h4>
-            <h4 className='headerLinks'>Blog</h4>
+            <h4 onClick={() => router.push('/blog')} className='headerLinks'>
+              Blog
+            </h4>
             <h4 className='headerLinks'>News</h4>
 
             <div className='headerIcons'>
