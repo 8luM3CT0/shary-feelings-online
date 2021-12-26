@@ -50,7 +50,7 @@ function BlogPost ({ id, author, title }) {
         <h1
           className='
                 text-lg 
-                lg:text-[60px] 
+                lg:text-[32px] 
                 font-robot-slab
                 font-semibold'
         >

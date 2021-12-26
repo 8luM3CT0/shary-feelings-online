@@ -156,6 +156,7 @@ export default function Home () {
               <span className='grid items-center space-y-4'>
                 <h2 className='text-lg font-google-sans text'>Blog name: </h2>
                 <input
+                  disabled={!user}
                   type='text'
                   className='border-0 outline-none text-teal-500'
                   value={post}
