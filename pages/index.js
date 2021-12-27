@@ -65,14 +65,16 @@ export default function Home () {
         place-items-center
         '
             ></div>
-            {docsSnapshot?.docs.map(doc => (
-              <BlogPost
-                key={doc.id}
-                id={doc.id}
-                title={doc.data().title}
-                author={doc.data().author}
-              />
-            ))}
+            <div className='h-screen grid-cols-1 lg:grid-cols-2'>
+              {docsSnapshot?.docs.map(doc => (
+                <BlogPost
+                  key={doc.id}
+                  id={doc.id}
+                  title={doc.data().title}
+                  author={doc.data().author}
+                />
+              ))}
+            </div>
           </main>
         </div>
       </div>

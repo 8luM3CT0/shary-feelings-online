@@ -8,6 +8,7 @@ import ModalHeader from '@material-tailwind/react/ModalHeader'
 import ModalBody from '@material-tailwind/react/ModalBody'
 import ModalFooter from '@material-tailwind/react/ModalFooter'
 import Login from './login'
+import UserBuild from '../components/feed/UserBuild'
 //back-end
 import { creds, provider, store } from '../firebaseFile'
 import { useRouter } from 'next/router'
@@ -82,7 +83,7 @@ function BlogPage () {
 
   return (
     <>
-      <div className='overflow-hidden scrollbar-hide pb-10 bg-gray-200'>
+      <div className='overflow-hidden h-screen scrollbar-hide pb-10 bg-gray-200'>
         <Head>
           <title>Here are your posts, {user?.displayName}</title>
         </Head>
@@ -90,11 +91,15 @@ function BlogPage () {
         <Header />
         <main
           className='
+          h-screen
             max-w-[1780px]
             grid
+            pb-[120px]
+            overflow-y-scroll
+            scrollbar-hide
             items-center
             mx-auto
-            bg-teal-100
+            bg-teal-200
             border-x-2
             border-blue-200
             '
@@ -107,7 +112,7 @@ function BlogPage () {
           opacity-80
           p-[190px]
           lg:p-[260px]
-        bg-mm-lakes
+        bg-bb-mountain
         grid
         place-items-center
         '
@@ -129,7 +134,12 @@ function BlogPage () {
             </Button>
           </div>
           {docsSnapshot?.docs.map(doc => (
-            <h1>docs here</h1>
+            <UserBuild
+              key={doc.id}
+              id={doc.id}
+              title={doc.data().title}
+              author={doc.data().author}
+            />
           ))}
         </main>
       </div>

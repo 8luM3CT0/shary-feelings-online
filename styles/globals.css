@@ -10,6 +10,12 @@
     lg:inline-flex
   }
 
+  .appNameMobile{
+    @apply
+    inline-flex
+    lg:hidden
+  }
+
   .headerLinks{
     @apply
     hidden

@@ -1,6 +1,7 @@
 //front-end
 import Head from 'next/head'
 import Button from '@material-tailwind/react/Button'
+import BookIcon from '@mui/icons-material/Book'
 import Icon from '@material-tailwind/react/Icon'
 //back-end
 import { creds, provider } from '../firebaseFile'
@@ -14,6 +15,7 @@ function Login () {
     <div
       className='
         bg-gray-200 
+        h-screen
         overflow-hidden 
         scrollbar-hide 
         flex 
@@ -30,11 +32,13 @@ function Login () {
         p-[70px] 
         px-[14px]
         grid
+        place-items-center
+        space-y-5
         justify-center
         bg-blue-100
         '
       >
-        <Icon name='book' size='3xl' />
+        <BookIcon className='h-[40px] text-teal-200' />
         <Button
           onClick={signIn}
           color='teal'

@@ -65,7 +65,10 @@ function Header () {
             >
               <Icon name='book' size='3xl' />
               <h3 className='appName font-font-robot capitalize text-2xl font-light'>
-                Blog
+                BlogDev
+              </h3>
+              <h3 className='appNameMobile font-font-robot capitalize text-lg font-light'>
+                Bd
               </h3>
             </Button>
           </div>
