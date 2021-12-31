@@ -5,10 +5,15 @@ import BookIcon from '@mui/icons-material/Book'
 import Icon from '@material-tailwind/react/Icon'
 //back-end
 import { creds, provider } from '../firebaseFile'
+import { useRouter } from 'next/router'
 
 function Login () {
+  const router = useRouter()
   const signIn = () => {
-    creds.signInWithPopup(provider).catch(alert)
+    creds
+      .signInWithPopup(provider)
+      .catch(alert)
+      .then(router.push('/'))
   }
 
   return (

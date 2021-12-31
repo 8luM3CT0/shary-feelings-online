@@ -139,4 +139,13 @@
         text-amber-600
   }
 
+  .textArea{
+    @apply
+    h-screen 
+max-w-[1780px] 
+        bg-gray-800 
+        flex-1 
+        mx-auto
+  }
+
 }

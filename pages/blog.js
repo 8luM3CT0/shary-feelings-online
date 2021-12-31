@@ -42,12 +42,6 @@ function BlogPage () {
         author: user.displayName,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       })
-
-    store.collection('blogPosts').add({
-      title: post,
-      author: user.displayName,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    })
     setPost('')
     setAddPost(false)
   }
@@ -97,7 +91,6 @@ function BlogPage () {
             pb-[120px]
             overflow-y-scroll
             scrollbar-hide
-            items-center
             mx-auto
             bg-teal-200
             border-x-2
@@ -157,7 +150,7 @@ function BlogPage () {
                 <input
                   disabled={!user}
                   type='text'
-                  className='border-0 outline-none text-teal-500'
+                  className='border-b border-teal-100 outline-none text-teal-500'
                   value={post}
                   onChange={e => setPost(e.target.value)}
                   placeholder='Name...'
@@ -170,7 +163,6 @@ function BlogPage () {
               color='red'
               buttonType='link'
               onClick={e => setAddPost(false)}
-              onKeyDown={e => e.key === 'Esc' && setAddPost(false)}
               ripple='dark'
             >
               Cancel
