@@ -138,7 +138,7 @@ function Header () {
                 block={false}
                 iconOnly={false}
                 ripple='dark'
-                onClick={() => router.push('/')}
+                onClick={() => router.push('/blog')}
                 className='flex items-center space-x-5'
               >
                 <Icon name='newspaper' size='xl' />

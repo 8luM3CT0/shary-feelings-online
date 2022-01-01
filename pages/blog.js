@@ -132,6 +132,7 @@ function BlogPage () {
               id={doc.id}
               title={doc.data().title}
               author={doc.data().author}
+              blogText={doc.data().blogText}
             />
           ))}
         </main>

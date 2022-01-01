@@ -133,19 +133,35 @@
         hidden 
         lg:inline-flex
         text-base 
-        font-robot-condensed  
-        lg:w-[300px] 
+        font-robot-condensed
+        w-[300px]  
+        lg:w-[600px] 
+        line-clamp-3
         font-semibold 
         text-amber-600
   }
 
   .textArea{
     @apply
-    h-screen 
-max-w-[1780px] 
+            h-screen
+            py-12
+            grid
+            max-w-[414px]    
+            lg:max-w-[1780px] 
         bg-gray-800 
-        flex-1 
-        mx-auto
+            flex-1
+            mx-auto
+  }
+
+  .indexMainDiv{
+    @apply
+    flex 
+    px-7
+    max-w-[414px] 
+    lg:max-w-[1780px] 
+    lg:px-0
+    mx-auto 
+    items-center
   }
 
 }
