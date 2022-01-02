@@ -217,7 +217,7 @@ function Build () {
           <h4 className='text-blue-200 font-hind-font text-xl font-semibold w-[320px] line-clamp-1 px-5'>
             {snapshot?.data()?.blogText}
           </h4>
-          <input
+          <textarea
             placeholder={`Type something, ${user?.displayName}`}
             ref={inputRef}
             type='text'
